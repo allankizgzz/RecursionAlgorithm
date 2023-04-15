@@ -5,10 +5,10 @@
 using namespace std;
 int n = 4, m = 2; // C4取2
 vector<int> nums(n);
-vector<vector<int>> result;
+vector<vector<int> > result;
 vector<int> path;
 void F(int num);
-void C(vector<int> &nums, int m, vector<vector<int>> &result, vector<int> &path);
+void C(vector<int> &nums, int m, vector<vector<int> > &result, vector<int> &path);
 
 void F(int num)
 { // 不用lambda寫fuction
@@ -23,7 +23,7 @@ void F(int num)
     }
 }
 // 生成由 nums 中 m 個元素組成的排列的遞迴函數
-void C(vector<int> &nums, int m, vector<vector<int>> &result, vector<int> &path)
+void C(vector<int> &nums, int m, vector<vector<int> > &result, vector<int> &path)
 {
     // 基本情況：如果當前路徑已達到 m 的大小，將其添加到結果中並返回
     if (path.size() == m)
@@ -234,7 +234,7 @@ int main()
     cout << "C排列:" << endl;
     // 生成由 nums 中 m 個元素組成的排列
     C(nums, m, result, path);
-    // 將結果輸出到控制台
+    // 將結果輸出
     for (const auto &vec : result)
     {
         for (const auto &num : vec)
